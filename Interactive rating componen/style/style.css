@@ -1,0 +1,142 @@
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --gray : #262F38;
+}
+body {
+    font-family: "Overpass", sans-serif;
+    font-size: 15px;
+    background-color: var(--Very-Dark-Blue);
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.card{
+    width: 410px;
+    padding: 1.5rem;
+    border-radius: 30px;
+    background-color: #212832;
+    min-height: 385px;
+    transition: 0.4s;
+    max-width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50% , -50%);
+    z-index: 2;
+}
+.card .star img{
+    background-color: var(--grey);
+    background-color: #282E34;
+    padding: 15px;
+    border-radius: 50%;
+    width: 50px;
+    margin: 10px 0  10px 7px  ;
+}
+.title{
+    color: var(--White);
+    font-size: 35px;
+    font-weight: 400;
+    margin: 10px 0 10px 10px;
+}
+.paragraph{
+    color: var(--Light-Grey);
+    margin: 0 0 10px 10px;
+}
+.numbers{
+    list-style: none;
+    color: var(--Light-Grey);
+}
+.numbers .num{
+    background-color: var(--gray);
+    margin-inline: auto;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    margin-block: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.numbers .num:hover{
+    background-color: var(--Orange);
+    color: #212832;
+}
+.numbers .active{
+    background-color: var(--White);
+    color: #212832;
+}
+.submit-btn{
+    padding: 10px 20px;
+    background-color: var(--Orange);
+    border-radius: 20px;
+    border: none;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: revert-layer;
+    transition: 0.4s;
+}
+.submit-btn:hover{
+    background-color: var(--White);
+    color: #212832;
+}
+/* ________________________________________-- */
+.thank-card{
+    width: 410px;
+    border-radius: 30px;
+    background-color: #212832;
+    transition: 0.4s;
+    text-align: center;
+    color: white;
+    min-height: 385px;
+    max-width: 90%;
+    flex-direction: column;
+    opacity: 0;
+    z-index: 1;
+    transform: scale(0.5);
+}
+.thank-card img{
+    margin: auto;
+}
+.thank-card .select{
+    background-color: #282E34;
+    width: fit-content;
+    padding: 5px 12px;
+    color: var(--Orange);
+    font-size: 13px;
+    margin: 30px auto;
+    border-radius: 30px;
+}
+.thank-card h3 {
+    font-weight:700;
+}
+.thank-card p {
+    color: var(--Light-Grey);
+    margin-top: 20px;
+}
+.hide{
+    opacity: 0;
+}
+.show{
+    opacity: 1;
+    z-index: 2;
+    transform: scale(1);
+}
+@media only screen and (max-width:375px){
+    .card,
+    .thank-card{
+        padding: 0.5rem;
+        border-radius: 20px;
+    }
+}
+
+
